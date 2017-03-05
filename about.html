@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Top-edge Communication</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/image_hover.css">
+    <link rel="stylesheet" href="css/news_footer.css">
+
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+   
+   <script>
+     //setInterval
+//animate margin-top
+//if it is the last slide reset 0px
+
+//listen mouseenter pause
+//resume on mouseleave
+$(function() {
+
+  //configurations
+  var height = '80px';
+  var animationSpeed = 1000;
+  var pause = 3000;
+  var currentSlide = 1;
+
+  //cache DOM
+  var $slidesWrapper = $('#news-slider');
+  var $slidesSelector = $slidesWrapper.find('.news-slides');
+  var $slides = $slidesSelector.find('.news-slide');
+  
+  var interval;
+
+  function startSlider() {
+    interval = setInterval(function() {
+      $slidesSelector.animate({
+        'margin-top': '-=' + height
+      }, animationSpeed, function() {
+        currentSlide++;
+        if (currentSlide == $slides.length) {
+          currentSlide = 1;
+          $slidesSelector.css('margin-top', 0);
+        }
+      });
+    }, pause);
+  }
+
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  $slidesWrapper.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+  startSlider();
+
+});
+   </script>
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Brand logo" class="img-responsive"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+        
+        
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li ><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="about.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fa fa-server fa-fw" aria-hidden="true"></i> Service</a></li>
+        <li><a href="client.html"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Client</a></li>
+        <li><a href="news.html"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> News Room</a></li>
+        <li><a href="contact.html"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> Contact Us</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<section class="about-header">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2><i class="fa fa-user fa-fw" aria-hidden="true"></i> About Us /</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente!</p>
+    </div>
+  </div>
+</section>
+<section class="about">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>ABOUT TOP-EDGE COMMUNICATION</h3>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sunt, totam ad? Numquam perspiciatis assumenda vel repudiandae, maiores ratione facilis nulla quidem minima voluptatum necessitatibus cumque eum dolores reprehenderit quas quaerat, quo expedita aspernatur? Id dolorum quaerat quisquam a explicabo veniam magnam et? Blanditiis nisi temporibus excepturi possimus odio, exercitationem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eos laborum asperiores tempora dolorem repellat tenetur porro quasi vero necessitatibus debitis pariatur, voluptatem libero nisi odit iusto laudantium officia expedita ex natus laboriosam earum dolores praesentium quaerat. Voluptas vel ipsa nihil aliquam doloribus, dignissimos alias quia a praesentium dolor necessitatibus omnis, porro! Odio quisquam officiis eius voluptas veritatis, ullam maxime praesentium ab reprehenderit a, commodi fugiat totam dolorum quo corrupti quos suscipit perspiciatis ipsa excepturi error nisi delectus harum optio laboriosam distinctio! Soluta architecto reiciendis veritatis minima repellat dicta consectetur laborum ratione nesciunt, molestiae saepe facere quod totam, neque mollitia!</p>
+    </div>
+    </div>
+</section>
+<section class="our-mission">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>OUR MISSION</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate <strong>necessitatibus</strong>  est quia <strong>consectetur</strong>  atque amet fugit <strong>fugiat</strong> fugiat impedit ad qui.</p>
+
+      <h4>events:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque similique natus eius possimus, atque quaerat fuga placeat sequi nulla ipsam eum perferendis laboriosam totam harum doloribus. Aliquam, sed, nemo!</p>
+
+      <h4>events:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque similique natus eius possimus, atque quaerat fuga placeat sequi nulla ipsam eum perferendis laboriosam totam harum doloribus. Aliquam, sed, nemo!</p>
+
+
+      <h4>events:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque similique natus eius possimus, atque quaerat fuga placeat sequi nulla ipsam eum perferendis laboriosam totam harum doloribus. Aliquam, sed, nemo!</p>
+
+
+      <h4>events:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum neque similique natus eius possimus, atque quaerat fuga placeat sequi nulla ipsam eum perferendis laboriosam totam harum doloribus. Aliquam, sed, nemo!</p>
+    </div>
+    </div>
+</section>
+
+<section class="why-choose">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>WHY CHOOSE US?</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate .</p>
+
+      <p><strong>Lorem ipsum dolor.</strong>     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat ducimus officia distinctio! Odit quod rem repellendus ratione qui aspernatur nemo. Eligendi, nulla labore saepe aliquid nemo itaque quis, ullam.</p>
+
+       <p><strong>Lorem ipsum dolor.</strong>     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat ducimus officia distinctio! Odit quod rem repellendus ratione qui aspernatur nemo. Eligendi, nulla labore saepe aliquid nemo itaque quis, ullam.</p>
+
+        <p><strong>Lorem ipsum dolor.</strong>     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat ducimus officia distinctio! Odit quod rem repellendus ratione qui aspernatur nemo. Eligendi, nulla labore saepe aliquid nemo itaque quis, ullam.</p>
+
+       <p><strong>Lorem ipsum dolor.</strong>     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat ducimus officia distinctio! Odit quod rem repellendus ratione qui aspernatur nemo. Eligendi, nulla labore saepe aliquid nemo itaque quis, ullam.</p>
+
+        <p><strong>Lorem ipsum dolor.</strong>     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat ducimus officia distinctio! Odit quod rem repellendus ratione qui aspernatur nemo. Eligendi, nulla labore saepe aliquid nemo itaque quis, ullam.</p>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="our_team_head">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h1>Meet Our Team</h1>
+    </div>
+  </div>  
+</section>
+<section class="our_team">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/1.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/2.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/3.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/4.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/4.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/3.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/2.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/1.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/1.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/2.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/3.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div><div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="grid">
+    <figure class="effect-phoebe">
+      <img src="image/team/4.jpg" alt="img03" class="img-responsive" />
+      <figcaption>
+        <h3>Didarul <span>Selim</span></h3>
+        <p>Web Designr</p>
+        <p>
+          <a href="#"><i class="fa fa-fw fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-twitter-square"></i></a>
+          <a href="#"><i class="fa fa-fw fa-google-plus-square"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    
+  </div>
+
+      </div>
+
+    </div>
+  </div>  
+</section>
+
+
+<footer>
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <section>
+    <h3>News Event</h3>
+  <section id="news-slider">
+    <article class="news-slides">
+
+      <article class="news-slide">
+        <strong>Consumers' choice award 2009 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      <article class="news-slide">
+        <strong>Consumers' choice award 2010 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      <article class="news-slide">
+        <strong>Consumers' choice award 2011 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      
+        
+    </article>
+  </section>
+  
+
+</section>
+      </div>
+
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="follow">
+          <h3>Follow Us</h3>
+            <div class="media">
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            </div>
+            <form>
+  <div class="form-group">
+    <p>Enter your email and you'll be one of the first to get new updates:</p>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"><br>
+    <button type="submit" class="btn btn-default">Subscribe</button>
+  </div>
+        </div>
+      
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+      <h3>Contact</h3>
+        <address>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> 27/3, 1st Floor, Central Road, Dhanmondi, 1205, Bangladesh</p><br>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> +8801758404033</p><br>
+          <p><i class="fa fa-envelope-o" aria-hidden="true"></i> atbdhelp@gmail.com</p>
+        </address>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer">
+    <p>Copyright 2016 All rights reserved Develop by <a href="http://advancetechnologybd.com/">Advance Technology Bd</a> </p>
+  </div>
+ <!--slider js -->
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.min.js"></script>
+  </body>
+</html>

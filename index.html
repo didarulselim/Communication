@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Top-edge Communication</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/image_hover.css">
+    <link rel="stylesheet" href="css/news_footer.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+   
+   <script>
+     //setInterval
+//animate margin-top
+//if it is the last slide reset 0px
+
+//listen mouseenter pause
+//resume on mouseleave
+$(function() {
+
+  //configurations
+  var height = '80px';
+  var animationSpeed = 1000;
+  var pause = 3000;
+  var currentSlide = 1;
+
+  //cache DOM
+  var $slidesWrapper = $('#news-slider');
+  var $slidesSelector = $slidesWrapper.find('.news-slides');
+  var $slides = $slidesSelector.find('.news-slide');
+  
+  var interval;
+
+  function startSlider() {
+    interval = setInterval(function() {
+      $slidesSelector.animate({
+        'margin-top': '-=' + height
+      }, animationSpeed, function() {
+        currentSlide++;
+        if (currentSlide == $slides.length) {
+          currentSlide = 1;
+          $slidesSelector.css('margin-top', 0);
+        }
+      });
+    }, pause);
+  }
+
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  $slidesWrapper.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+  startSlider();
+
+});
+   </script>
+  </head>
+  <body>
+  <header>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Brand logo" class="img-responsive"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+        
+        
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="active"><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="about.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fa fa-server fa-fw" aria-hidden="true"></i> Service</a></li>
+        <li><a href="client.html"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Client</a></li>
+        <li><a href="news.html"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> News Room</a></li>
+        <li><a href="contact.html"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> Contact Us</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </header>
+
+
+
+
+ <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider">
+ <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+    <li><img src="data1/images/sl1.jpg" alt="sl1" title="" id="wows1_0"/></li>
+    <li><img src="data1/images/sl2.jpg" alt="sl2" title="" id="wows1_1"/></li>
+    <li><img src="data1/images/sl3.jpg" alt="responsive slider" title="" id="wows1_2"/></li>
+    <li><img src="data1/images/sl4.jpg" alt="sl4" title="" id="wows1_3"/></li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="sl1"><span><img src="data1/tooltips/sl1.jpg" alt="sl1"/>1</span></a>
+    <a href="#" title="sl2"><span><img src="data1/tooltips/sl2.jpg" alt="sl2"/>2</span></a>
+    <a href="#" title="sl3"><span><img src="data1/tooltips/sl3.jpg" alt="sl3"/>3</span></a>
+    <a href="#" title="sl4"><span><img src="data1/tooltips/sl4.jpg" alt="sl4"/>4</span></a>
+  </div></div>
+<div class="ws_shadow"></div>
+</div>  
+
+
+ 
+
+
+
+
+</section>
+
+
+  
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 home_heading">
+    
+      <h2>We are <strong>Top-Edge Communication</strong>, a super Top-Edge Management Firm of Bangladesh</h2>
+      <p>we make event happen</p>
+    
+  </div>
+
+
+<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 our-event">  
+    
+
+      <div class="col-sm-4  col-md-4 col-lg-4">
+        <div class="event-1">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <h4>PR</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nam corrupti accusantium? Repellendus vitae temporibus rerum quasi adipisci maiores placeat.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4  col-md-4 col-lg-4">
+        <div class="event-1">
+          <i class="fa fa-magic" aria-hidden="true"></i>
+          <h4>EVENT</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dolore, ratione. Similique vel cupiditate reiciendis quo itaque commodi quidem totam.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4  col-md-4 col-lg-4">
+        <div class="event-1">
+          <i class="fa fa-file-video-o" aria-hidden="true"></i>
+          <h4>DIGITAL MEDIA COMMUNICATION</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis reprehenderit, delectus harum. Vero deserunt accusantium temporibus voluptates voluptatem cumque.</p>
+        </div>
+      </div>
+    
+</section>
+
+<section class="letest-work-heading">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <hr><h1>Our Latest Work</h1><hr>
+    </div>
+    </div>
+</section>
+
+<section class="letest-work">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_1.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="image/work/event_1.jpg"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_2.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_3.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_4.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_4.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_3.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_2.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_1.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_1.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_2.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_3.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="grid">
+    <figure class="effect-hera">
+      <img src="image/work/event_4.jpg" alt="img" class="img-responsive" />
+      <figcaption>
+        <h3>Advance <span>Technology </span>BD</h3>
+        <p>
+          
+          <a href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+          
+        </p>
+      </figcaption>
+    </figure>
+    </div>
+      </div>
+
+      </div>
+    </div>
+    
+</section>
+
+<footer>
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <section>
+    <h3>News Event</h3>
+  <section id="news-slider">
+    <article class="news-slides">
+
+      <article class="news-slide">
+        <strong>Consumers' choice award 2009 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      <article class="news-slide">
+        <strong>Consumers' choice award 2010 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      <article class="news-slide">
+        <strong>Consumers' choice award 2011 - Third consecutive year</strong>
+        <p>To all our clients and collaborators, RCI Environment is the...<a href="event-news_1.html">View News..</a>
+        </p>
+        
+      </article>
+        
+      
+        
+    </article>
+  </section>
+  
+
+</section>
+      </div>
+
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="follow">
+          <h3>Follow Us</h3>
+            <div class="media">
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            </div>
+            <form>
+  <div class="form-group">
+    <p>Enter your email and you'll be one of the first to get new updates:</p>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"><br>
+    <button type="submit" class="btn btn-default">Subscribe</button>
+  </div>
+        </div>
+      
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+      <h3>Contact</h3>
+        <address>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> 27/3, 1st Floor, Central Road, Dhanmondi, 1205, Bangladesh</p><br>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> +8801758404033</p><br>
+          <p><i class="fa fa-envelope-o" aria-hidden="true"></i> atbdhelp@gmail.com</p>
+        </address>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer">
+    <p>Copyright 2016 All rights reserved Develop by <a href="http://advancetechnologybd.com/">Advance Technology Bd</a> </p>
+  </div>
+ <!--slider js -->
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.min.js"></script>
+    
+
+
+  </body>
+</html>

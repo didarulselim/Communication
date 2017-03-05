@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Top-edge Communication</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/image_hover.css">
+    <link rel="stylesheet" href="css/news_footer.css">
+
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+   
+   <script>
+     //setInterval
+//animate margin-top
+//if it is the last slide reset 0px
+
+//listen mouseenter pause
+//resume on mouseleave
+$(function() {
+
+  //configurations
+  var height = '80px';
+  var animationSpeed = 1000;
+  var pause = 3000;
+  var currentSlide = 1;
+
+  //cache DOM
+  var $slidesWrapper = $('#news-slider');
+  var $slidesSelector = $slidesWrapper.find('.news-slides');
+  var $slides = $slidesSelector.find('.news-slide');
+  
+  var interval;
+
+  function startSlider() {
+    interval = setInterval(function() {
+      $slidesSelector.animate({
+        'margin-top': '-=' + height
+      }, animationSpeed, function() {
+        currentSlide++;
+        if (currentSlide == $slides.length) {
+          currentSlide = 1;
+          $slidesSelector.css('margin-top', 0);
+        }
+      });
+    }, pause);
+  }
+
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  $slidesWrapper.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+  startSlider();
+
+});
+   </script>
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Brand logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+        
+        
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li ><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home<span class="sr-only">(current)</span></a></li>
+        <li ><a href="about.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fa fa-server fa-fw" aria-hidden="true"></i> Service</a></li>
+        <li><a href="client.html"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Client</a></li>
+        <li><a href="news.html"><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i> News Room</a></li>
+        <li class="active"><a href="contact.html"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> Contact Us</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<section class="contact-header">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> Contact Us /</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente!</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <div class="col-sm-12 col-md-6 col-lg-6">
+    <form>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="name" class="form-control"  placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control"  placeholder="Your Email">
+  </div>
+  <div class="form-group">
+    <label>Subject</label>
+    <input type="Subject" class="form-control"  placeholder="Your Subject">
+  </div>
+  <div class="form-group">
+    <label>Massage</label>
+    <textarea class="form-control" rows="3" placeholder="Your Massage"></textarea>
+  </div>
+
+  <button type="button" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  
+
+      
+    
+    <div class="col-sm-12 col-md-6 col-lg-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d764.4319096693903!2d90.38791900000001!3d23.741898000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x69e10970da52ae03!2sMarketever!5e1!3m2!1sen!2sbd!4v1463403784237"  frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer>
+  <div class="container-fluid">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <section>
+    <h3>News Event</h3>
+  <section id="news-slider">
+    <article class="news-slides">
+
+      <article class="news-slide">
+        <strong class="news-title">Consumers' choice award 2009 - Third consecutive year</strong>
+        <p class="news-summary">To all our clients and collaborators, RCI Environment is the...</p>
+        <a href="#" class="news-button">View News..</a>
+      </article>
+        
+      <article class="news-slide">
+        <strong class="news-title">Consumers' choice award 2010 - Third consecutive year</strong>
+        <p class="news-summary">To all our clients and collaborators, RCI Environment is the...</p>
+        <a href="#" class="news-button">View News..</a>
+      </article>
+        
+      <article class="news-slide">
+        <strong class="news-title">Consumers' choice award 2011 - Third consecutive year</strong>
+        <p class="news-summary">To all our clients and collaborators, RCI Environment is the...</p>
+        <a href="#" class="news-button">View News..</a>
+      </article>
+        
+      <article class="news-slide">
+        <strong class="news-title">Consumers' choice award 2009 - Third consecutive year</strong>
+        <p class="news-summary">To all our clients and collaborators, RCI Environment is the...</p>
+        <a href="#" class="news-button">View News..</a>
+      </article>
+        
+    </article>
+  </section>
+  
+
+</section>
+      </div>
+
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="follow">
+          <h3>Follow Us</h3>
+            <div class="media">
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            </div>
+            <form>
+  <div class="form-group">
+    <p>Enter your email and you'll be one of the first to get new updates:</p>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"><br>
+    <button type="submit" class="btn btn-default">Subscribe</button>
+  </div>
+        </div>
+      
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+      <h3>Contact</h3>
+        <address>
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> 27/3, 1st Floor, Central Road, Dhanmondi, 1205, Bangladesh</p><br>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> +8801758404033</p><br>
+          <p><i class="fa fa-envelope-o" aria-hidden="true"></i> atbdhelp@gmail.com</p>
+        </address>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer">
+    <p>Copyright 2016 All rights reserved Developed by <a href="http://advancetechnologybd.com/">Advance Technology Bd</a> </p>
+  </div>
+ <!--slider js -->
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.min.js"></script>
+  </body>
+</html>
